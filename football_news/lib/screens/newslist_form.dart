@@ -15,7 +15,7 @@ class _NewsFormPageState extends State<NewsFormPage> {
     String _title = "";
     String _content = "";
     String _category = "update"; // default
-    String _thumbnail = "";
+    String _thumbnail = "Tidak ada photo";
     bool _isFeatured = false; // default
 
     final List<String> _categories = [
@@ -38,7 +38,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
           backgroundColor: Colors.indigo,
           foregroundColor: Colors.white,
         ),
-        // TODO: Tambahkan drawer yang sudah dibuat di sini
         drawer: LeftDrawer(),
         body: Form(
           key: _formKey,
@@ -190,13 +189,13 @@ class _NewsFormPageState extends State<NewsFormPage> {
                                     child: const Text('OK'),
                                     onPressed: () {
                                       Navigator.pop(context);
+                                      _formKey.currentState!.reset();
                                     },
                                   ),
                                 ],
                               );
                             },
                           );
-                          _formKey.currentState!.reset();
                         }
                       },
                       child: const Text(
