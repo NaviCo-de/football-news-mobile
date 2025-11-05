@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:football_news/screens/newslist_form.dart';
 import 'package:football_news/widgets/left_drawer.dart';
 import 'package:football_news/widgets/news_card.dart';
 
@@ -26,7 +25,7 @@ class MyHomePage extends StatelessWidget {
       ),
       drawer: LeftDrawer(),
       // Body halaman dengan padding di sekelilingnya.
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         // Menyusun widget secara vertikal dalam sebuah kolom.
         child: Column(
