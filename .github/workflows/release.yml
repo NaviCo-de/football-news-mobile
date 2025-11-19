@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Change Directory
-        uses: cd football_news
-        
+        run: cd football_news
+
       - name: Checkout the code
         uses: actions/checkout@v4
 
