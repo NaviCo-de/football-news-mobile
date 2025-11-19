@@ -57,3 +57,4 @@ class NewsEntry {
     "user_id": userId,
   };
 }
+// Push
